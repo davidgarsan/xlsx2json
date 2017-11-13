@@ -1,0 +1,34 @@
+{
+  "name": "xlsx2json",
+  "version": "1.0.0",
+  "description": "Turns Excel files into JSON files for multi-language use (i18n).",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidgarsan/xlsx2json.git"
+  },
+  "keywords": [
+    "i18n",
+    "parser",
+    "JSON",
+    "XLSX"
+  ],
+  "author": "davidgarsan@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidgarsan/xlsx2json/issues"
+  },
+  "homepage": "https://github.com/davidgarsan/text2sql#readme",
+  "dependencies": {
+    "chai": "^4.1.0",
+    "chalk": "^2.0.1",
+    "figlet": "^1.2.0",
+    "lodash": "^4.17.4",
+    "mocha": "^3.4.2",
+    "xlsx": "^0.11.8",
+    "xlsx-style": "^0.8.13"
+  },
+  "bin": {
+    "xlsx2json": "./src/index.js"
+  }
+}
