@@ -12,8 +12,8 @@ module.exports = {
     const filePath = process.argv[2];
     let quiet = false;
 
-    if (filePath === undefined || !fs.existsSync(filePath) || path.extname(filePath) !== '.xlsx') {
-      throw new Error('Se debe pasar como primer parámetro la ruta un archivo XLSX.');
+    if (filePath === undefined || !filePath.startsWith('https://docs.google.com/spreadsheets')) {
+      throw new Error('Se debe pasar como primer parámetro la ruta a una hoja de cálculo de Google Drive.');
     }
 
     if (process.argv.indexOf('-q') != -1) {
