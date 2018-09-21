@@ -22,8 +22,8 @@ workbook = XLSX.readFile(absPath);
 sheet = workbook.Sheets[workbook.SheetNames[0]];
 
 for (let z in sheet) {
-  if(z[0] !== '!' && z[0] !== 'A' && z[1] !== '1') {
-    _.set(strings, sheet[z[0] + 1].v + '.' + sheet['A' + z[1]].v, sheet[z].v);
+  if(z[0] !== '!' && z[0] !== 'A' && z.substr(1) !== '1') {
+    _.set(strings, sheet[z[0] + 1].v + '.' + sheet['A' + z.substr(1)].v, sheet[z].v);
   }
 }
 
