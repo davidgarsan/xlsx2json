@@ -1,5 +1,5 @@
 {
-  "name": "i18nSheet2json",
+  "name": "i18n-spreadsheet",
   "version": "1.0.0",
   "description": "Turns Excel files into JSON files for multi-language use (i18n).",
   "main": "./src/index.js",
