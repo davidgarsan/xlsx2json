@@ -19,7 +19,7 @@ multi-language texts and generates from these data JSON files for use in applica
 
     log(chalk.bold('Rules:'));
 
-    log(chalk`  In order to generate these multi-language files, the XLSX spreadsheet must keep an specific format:
+    log(chalk`  In order to generate these multi-language files, the XLSX spreadsheet must keep a specific format:
   {blue
   ╔═══╦════════════════╦════════════════╦═══════════╗
   ║   ║       A        ║       B        ║     C     ║
@@ -31,8 +31,8 @@ multi-language texts and generates from these data JSON files for use in applica
   ║ 5 ║ login.password ║ Contraseña     ║ Password  ║
   ╚═══╩════════════════╩════════════════╩═══════════╝}
   
-  - Only the first sheep will be parsed.
-  - The data mus start in the coordinates origin (A1).
+  - Only the first sheet will be parsed.
+  - The data must start in the coordinates origin (A1).
   - The first column (A) will define the keys of the JSON to generate, being able to have has many levels as needed.
   - The first row (1) will define the languages to translate, becoming each one a different JSON file.
   
