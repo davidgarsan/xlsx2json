@@ -1,4 +1,4 @@
-# i18n-spreadsheet
+# i18n-xlsx2json
 
 This utility parses XLSX (Excel) documents with a specific format, extracting the keys and values from
 multi-language texts and generates from these data JSON files for use in applications with i18n support.
@@ -47,22 +47,22 @@ In order to generate these multi-language files, the XLSX spreadsheet must keep 
 
 ## Install
 
-1. Install the i18n-spreadsheet package globally:
+1. Install the i18n-xlsx2json package globally:
 
   ```
-  npm i -g i18n-spreadsheet
+  npm i -g i18n-xlsx2json
   ```
   
 3. Once the package is installed it will be possible use it from any directory:
 
   ```
-  i18n-spreadsheet -h   
+  i18n-xlsx2json -h   
   ```
  
 ## Usage
 
-* **i18n-spreadsheet -h**                  Shows this help.
-* **i18n-spreadsheet \<path>**  Generates JSON files based in the spreadsheet path passed as parameter.
+* **i18n-xlsx2json -h**                  Shows this help.
+* **i18n-xlsx2json \<path>**  Generates JSON files based in the spreadsheet path passed as parameter.
 
 ### Parameters
 
