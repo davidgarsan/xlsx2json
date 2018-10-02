@@ -6,11 +6,11 @@ module.exports = {
   print: function () {
     log(
       chalk.hex('#66cc10')(
-        figlet.textSync('Xlsx2JSON', { horizontalLayout: 'fitted'})
+        figlet.textSync('i18n-XLSX2JSON', { horizontalLayout: 'fitted'})
       )
     );
 
-    log(chalk.bold('Xlsx2JSON:'));
+    log(chalk.bold('i18n-xlsx2json:'));
 
     log(`  Esta utilidad parsea documentos XLSX (Excel) con un formato determinado, extrayendo las claves y valores de
   textos multiidioma y genera a partir de estos datos archivos JSON para su uso en aplicaciones con soporte i18n.
@@ -53,8 +53,8 @@ module.exports = {
 
     log(chalk.bold('Uso:'));
 
-    log(chalk`  {italic xlsx2json -h}               Imprime este mensaje.
-  {italic xlsx2json <path>}           Genera unos archivos JSON a partir del archivo XLSX en el path.
+    log(chalk`  {italic i18n-xlsx2json  -h}               Imprime este mensaje.
+  {italic i18n-xlsx2json <path>}           Genera unos archivos JSON a partir del archivo XLSX en el path.
   `);
 
     log(chalk.bold('Parámetros:'));

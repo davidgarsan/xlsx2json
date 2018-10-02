@@ -4,11 +4,20 @@ const path = require('path');
 const _ = require('lodash');
 const XLSX = require('xlsx-style');
 const fs = require('fs');
-const help = require('./help');
+const help_en = require('./help.en');
+const help_es = require('./help.es');
 const utils = require('./utils');
 let conf;
 
+function getEnvLocale(env) {
+  env = env || process.env;
+  return env.LC_ALL || env.LC_MESSAGES || env.LANG || env.LANGUAGE;
+}
+
 if (process.argv.length == 3 && process.argv.indexOf('-h') != -1) {
+  const locale = getEnvLocale();
+  const lang = locale.split('_')[0];
+  const help = lang === 'es' ? help_es : help_en;
   return help.print();
 }
 

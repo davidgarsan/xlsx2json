@@ -1,5 +1,5 @@
 {
-  "name": "i18n-spreadsheet",
+  "name": "i18n-xlsx2json",
   "version": "1.0.0",
   "description": "Turns Excel files into JSON files for multi-language use (i18n).",
   "main": "./src/index.js",
@@ -18,17 +18,15 @@
   "bugs": {
     "url": "https://github.com/davidgarsan/xlsx2json/issues"
   },
-  "homepage": "https://github.com/davidgarsan/text2sql#readme",
+  "homepage": "https://github.com/davidgarsan/xlsx2json#readme",
   "dependencies": {
-    "chai": "^4.1.0",
     "chalk": "^2.0.1",
     "figlet": "^1.2.0",
     "lodash": "^4.17.11",
-    "mocha": "^3.4.2",
     "xlsx": "^0.14.0",
     "xlsx-style": "^0.8.13"
   },
   "bin": {
-    "xlsx2json": "./src/index.js"
+    "i18n-xlsx2json": "./src/index.js"
   }
 }

@@ -1,13 +1,13 @@
-# Xlsx2JSON
+# i18n-spreadsheet
 
-Esta utilidad parsea documentos XLSX (Excel) con un formato determinado, extrayendo las claves y valores de
-textos multi-idioma y genera a partir de estos datos archivos JSON para su uso en aplicaciones con soporte i18n.
+This utility parses XLSX (Excel) documents with a specific format, extracting the keys and values from
+multi-language texts and generates from these data JSON files for use in applications with i18n support.
 
-Se crearán tantos archivos JSON como columnas de idiomas se hayan definido en el documento XLSX de entrada.
+You will create as many JSON files as there are language columns defined in the incoming XLSX document.
 
-## Convenciones
+## Rules
 
-Para generar estos archivos multi-idioma, la tabla XLSX deberá cumplir con un determinado formato:
+In order to generate these multi-language files, the XLSX spreadsheet must keep an specific format:
 
 |                | es             | en        |
 |----------------|----------------|-----------|
@@ -16,13 +16,12 @@ Para generar estos archivos multi-idioma, la tabla XLSX deberá cumplir con un d
 | login.user     | Nombre Usuario | User Name |
 | login.password | Contraseña     | Password  |
 
-  - Se parseará solo la primera hoja del documento.
-  - La tabla de datos deberá iniciarse en el origen de coordenadas (A1).
-  - La primera columna (A) definirá las claves del documento JSON a generar, pudiendo ser de varios niveles
-    separados por puntos.
-  - La primera fila (1) definirá los distintos idiomas, dando lugar cada uno a un archivo JSON diferente.
+  - Only the first sheet will be parsed.
+  - The data mus start in the coordinates origin (A1).
+  - The first column (A) will define the keys of the JSON to generate, being able to have has many levels as needed.
+  - The first row (1) will define the languages to translate, becoming each one a different JSON file.
   
-  La tabla anterior generará los siguientes JSON:
+  The previous table will generate the following JSON files:
   
   ```
   // es.json
@@ -46,31 +45,27 @@ Para generar estos archivos multi-idioma, la tabla XLSX deberá cumplir con un d
   }
   ```
 
-## Instalación
+## Install
 
-1. Clonar Xlsx2JSON del repositorio git:
-
-  ```
-  git clone https://github.com/davidgarsan/xlsx2json.git
-  ```
-2. Instalar la herramienta globalmente: 
+1. Install the i18n-spreadsheet package globally:
 
   ```
-  npm install -g ./xlsx2json 
+  npm i -g i18n-spreadsheet
   ```
-3. Una vez finalizada la instalación será posible ejecutarla desde cualquier directorio:
+  
+3. Once the package is installed it will be possible use it from any directory:
 
   ```
-  xlsx2json -h   
+  i18n-spreadsheet -h   
   ```
  
-## Uso
+## Usage
 
-* **xlsx2json -h**                  Muestra la ayuda.
-* **xlsx2json \<path>**  Genera unos archivos JSON a partir del archivo XLSX en el path.
+* **i18n-spreadsheet -h**                  Shows this help.
+* **i18n-spreadsheet \<path>**  Generates JSON files based in the spreadsheet path passed as parameter.
 
-### Parámetros
+### Parameters
 
-* **path**                  Ruta al archivo XLSX.
+* **path**                  Path to the spreadsheet file.
 
 davidgarsan | 2017
